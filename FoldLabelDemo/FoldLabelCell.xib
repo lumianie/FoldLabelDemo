@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="259" id="KGk-i7-Jjw" customClass="FoldLabelCell">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="259"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="258.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-AQ-jTs">
+                        <rect key="frame" x="15" y="10" width="470" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="lCM-kt-WcT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UILabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-Wp-FrN">
+                        <rect key="frame" x="15" y="40" width="470" height="178.5"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0av-KN-wHh">
+                        <rect key="frame" x="454" y="228.5" width="31" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="qcq-7a-o0s"/>
+                        </constraints>
+                        <state key="normal" title="展开"/>
+                        <connections>
+                            <action selector="foldButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jRG-fa-9Nk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xtK-Wp-FrN" firstAttribute="top" secondItem="jFe-AQ-jTs" secondAttribute="bottom" constant="10" id="9aq-aQ-uHj"/>
+                    <constraint firstItem="0av-KN-wHh" firstAttribute="top" secondItem="xtK-Wp-FrN" secondAttribute="bottom" constant="10" id="G7T-V4-fA3"/>
+                    <constraint firstAttribute="trailing" secondItem="jFe-AQ-jTs" secondAttribute="trailing" constant="15" id="IIe-S3-Ado"/>
+                    <constraint firstItem="jFe-AQ-jTs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ofp-cS-T9D"/>
+                    <constraint firstItem="0av-KN-wHh" firstAttribute="trailing" secondItem="xtK-Wp-FrN" secondAttribute="trailing" id="Plx-rH-Xdk"/>
+                    <constraint firstItem="xtK-Wp-FrN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eX0-d1-jRZ"/>
+                    <constraint firstAttribute="trailing" secondItem="xtK-Wp-FrN" secondAttribute="trailing" constant="15" id="tkW-ql-gKR"/>
+                    <constraint firstAttribute="bottom" secondItem="0av-KN-wHh" secondAttribute="bottom" constant="10" id="ueh-oz-e3V"/>
+                    <constraint firstItem="jFe-AQ-jTs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wtU-6f-Bux"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="contentLabel" destination="xtK-Wp-FrN" id="ZhK-ud-8No"/>
+                <outlet property="foldButton" destination="0av-KN-wHh" id="Gcf-Ff-T2b"/>
+                <outlet property="foldButtonHeight" destination="qcq-7a-o0s" id="c9w-kl-c3Z"/>
+                <outlet property="foldButtonTopMargin" destination="G7T-V4-fA3" id="har-5g-zM8"/>
+                <outlet property="topicLabel" destination="jFe-AQ-jTs" id="Jll-kP-yo6"/>
+            </connections>
+            <point key="canvasLocation" x="-667" y="73"/>
+        </tableViewCell>
+    </objects>
+</document>
